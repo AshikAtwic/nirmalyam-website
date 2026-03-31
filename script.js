@@ -40,9 +40,9 @@ contactForm.addEventListener('submit', (e) => {
 contactForm.reset();
 });
 
-// WhatsApp prefill for contact form
+// Single contact form handler with WhatsApp (remove duplicate alert)
 contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     
     const name = contactForm.querySelector('input[type="text"]').value;
     const email = contactForm.querySelector('input[type="email"]').value;
