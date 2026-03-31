@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nirmalyam - Premium Clothing Store</title>
     <link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    
     <header>
         <nav class="navbar">
             <div class="nav-container">
@@ -32,44 +43,14 @@
         </nav>
     </header>
 
-<section id="home" class="hero">
-        <div class="hero-carousel">
-            <div class="carousel-slides">
-                <div class="slide active">
-                    <div class="hero-overlay"></div>
-                    <img src="./images/saree1.jpeg" alt="Saree 1" class="hero-img">
-                </div>
-                <div class="slide">
-                    <div class="hero-overlay"></div>
-                    <img src="./images/saree2.jpeg" alt="Saree 2" class="hero-img">
-                </div>
-                <div class="slide">
-                    <div class="hero-overlay"></div>
-                    <img src="./images/saree3.jpeg" alt="Saree 3" class="hero-img">
-                </div>
-                <div class="slide">
-                    <div class="hero-overlay"></div>
-                    <img src="./images/saree4.jpeg" alt="Saree 4" class="hero-img">
-                </div>
-                <div class="slide">
-                    <div class="hero-overlay"></div>
-                    <img src="./images/saree5.jpeg" alt="Saree 5" class="hero-img">
-                </div>
-            </div>
-            <button class="carousel-btn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
-            <button class="carousel-btn next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
-            <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-            </div>
-            <div class="hero-content">
-                <h1>Discover Timeless Elegance</h1>
-                <p>Premium clothing for every occasion. Shop the latest collections at Nirmalyam.</p>
-                <a href="#products" class="cta-button">Shop Now</a>
-            </div>
+    <section id="home" class="hero">
+        <!-- Floating Particles -->
+        <div class="particles" id="particles"></div>
+        
+        <div class="hero-content">
+            <h1 class="glitch-text" data-text="Discover Timeless Elegance">Discover Timeless Elegance</h1>
+            <p>Premium clothing for every occasion. Shop the latest collections at Nirmalyam.</p>
+            <a href="#products" class="cta-button magnetic">Shop Now</a>
         </div>
     </section>
 
@@ -78,26 +59,11 @@
             <h2 class="section-title">Featured Products</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-images">
+<div class="product-images">
                         <img src="./images/saree1.jpeg" alt="Saree 1" class="saree-img">
                         <img src="./images/saree 1 model.jpeg" alt="Model in Saree 1" class="model-img">
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Royal Kanjeevaram Saree</h3>
-                        <div class="product-price">₹15,999</div>
-                        <div class="product-title"><i class="fas fa-star"></i> Premium Item</div>
-                        <a href="https://wa.me/919567201036" class="info-button" target="_blank"><i class="fab fa-whatsapp"></i> Info</a>
-
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-images">
-                        <img src="./images/saree2.jpeg" alt="Saree 2" class="saree-img">
-                        <img src="./images/saree 2 model.jpeg" alt="Model in Saree 2" class="model-img">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Kanchipuram Silk Saree</h3>
-                        <div class="product-price">₹12,499</div>
                         <div class="product-title"><i class="fas fa-star"></i> Premium Item</div>
                         <a href="https://wa.me/919567201036" class="info-button" target="_blank"><i class="fab fa-whatsapp"></i> Info</a>
 
@@ -105,12 +71,10 @@
                 </div>
                 <div class="product-card">
 <div class="product-images">
-                        <img src="./images/saree3.jpeg" alt="Saree 3" class="saree-img">
-                        <img src="./images/saree 3 model.jpeg" alt="Model in Saree 3" class="model-img">
+                        <img src="./images/saree2.jpeg" alt="Saree 2" class="saree-img">
+                        <img src="./images/saree 2 model.jpeg" alt="Model in Saree 2" class="model-img">
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Banarasi Brocade Saree</h3>
-                        <div class="product-price">₹18,999</div>
                         <div class="product-title"><i class="fas fa-star"></i> Premium Item</div>
                         <a href="https://wa.me/919567201036" class="info-button" target="_blank"><i class="fab fa-whatsapp"></i> Info</a>
 
@@ -164,7 +128,7 @@
                     <p>Nirmalyam is more than a clothing store—it's a celebration of style, quality, and individuality. We curate collections that blend contemporary trends with timeless craftsmanship.</p>
                     <p>From casual wear to formal attire, our garments are designed to make you feel confident and stylish every day.</p>
                 </div>
-                <img src="./images/saree 5 model.jpeg" alt="About Us" class="about-image">
+                <img src="./images/saree 1 model.jpeg" alt="About Us" class="about-image">
             </div>
         </div>
     </section>
