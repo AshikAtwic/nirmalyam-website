@@ -12,11 +12,11 @@
 
 ### 4. [x] Add product names/prices
 
-### 5. [ ] Masonry gallery + lightbox
+### 5. [x] Masonry gallery + lightbox
 
 ### 6. [ ] Enhanced typography (Playfair headings), dark mode
 
-### 7. [ ] Contact form → WhatsApp prefill
+### 7. [x] Contact form → WhatsApp prefill
 
 ### 8. [ ] Lazy loading, final polish
 

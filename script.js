@@ -37,6 +37,22 @@ const contactForm = document.querySelector('.contact-form');
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     alert('Thank you for your message! We\'ll get back to you soon.');
+contactForm.reset();
+});
+
+// WhatsApp prefill for contact form
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const name = contactForm.querySelector('input[type="text"]').value;
+    const email = contactForm.querySelector('input[type="email"]').value;
+    const message = contactForm.querySelector('textarea').value;
+    
+    const whatsappMsg = `Hi, I'm ${name} (${email}). ${message}`;
+    const encodedMsg = encodeURIComponent(whatsappMsg);
+    const whatsappUrl = `https://wa.me/919567201036?text=${encodedMsg}`;
+    
+    window.open(whatsappUrl, '_blank');
     contactForm.reset();
 });
 
@@ -119,3 +135,28 @@ function showSlides(n) {
 setInterval(() => {
     changeSlide(1);
 }, 5000);
+
+// Lightbox functionality
+document.querySelectorAll('.gallery-img').forEach(img => {
+    img.addEventListener('click', function() {
+        const lightbox = document.createElement('div');
+        lightbox.classList.add('lightbox');
+        lightbox.innerHTML = `
+            <div class="lightbox-content">
+                <span class="lightbox-close">&times;</span>
+                <img class="lightbox-img" src="${this.src}">
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+        
+        lightbox.querySelector('.lightbox-close').addEventListener('click', () => {
+            document.body.removeChild(lightbox);
+        });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                document.body.removeChild(lightbox);
+            }
+        });
+    });
+});
