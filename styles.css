@@ -217,12 +217,12 @@ body {
 /* Hero Section */
 .hero {
     background: 
-        radial-gradient(ellipse at 20% 80%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(139, 69, 19, 0.15) 0%, transparent 50%),
-        linear-gradient(rgba(15, 15, 26, 0.7), rgba(15, 15, 26, 0.8)),
-        url('https://images.pexels.com/photos/1566632/pexels-photo-1566632.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop');
+        radial-gradient(ellipse at 20% 80%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(139, 69, 19, 0.2) 0%, transparent 50%),
+        linear-gradient(rgba(15, 15, 26, 0.6), rgba(15, 15, 26, 0.75)),
+        url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1920&q=80');
     background-size: cover;
-    background-position: center;
+    background-position: center 20%;
     background-attachment: fixed;
     height: 100vh;
     display: flex;
