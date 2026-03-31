@@ -595,12 +595,95 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 2rem 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .hero {
+        height: 100vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .products {
+        padding: 60px 0;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        column-count: 2;
+    }
+}
+
 @media (max-width: 480px) {
+    .hero {
+        height: 100vh;
+    }
+    
     .hero-content h1 {
         font-size: 2rem;
     }
     
     .section-title {
         font-size: 2rem;
+    }
+    
+    .carousel-dots {
+        bottom: 20px;
+    }
+    
+    .gallery-grid {
+        column-count: 1;
+    }
+    
+    .product-card {
+        margin-bottom: 1rem;
+    }
+    
+    .products-grid {
+        gap: 1rem;
     }
 }

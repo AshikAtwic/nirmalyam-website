@@ -14,7 +14,7 @@
 
 ### 5. [x] Masonry gallery + lightbox
 
-### 6. [ ] Enhanced typography (Playfair headings), dark mode
+### 6. [x] Enhanced typography (Playfair headings), improved mobile responsiveness
 
 ### 7. [x] Contact form → WhatsApp prefill
 
