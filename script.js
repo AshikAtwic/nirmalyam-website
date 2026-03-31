@@ -73,16 +73,7 @@ document.querySelectorAll('.product-card, .gallery-img').forEach((el, index) => 
     revealObserver.observe(el);
 });
 
-// Advanced parallax for multiple layers
-const parallaxElements = document.querySelectorAll('.hero, .products, .gallery');
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    
-    parallaxElements.forEach((el, index) => {
-        const speed = 0.3 + (index * 0.1);
-        el.style.transform = `translateY(${scrolled * speed}px)`;
-    });
-});
+// Advanced parallax removed per user request
 
 // Floating animation for CTAs and buttons
 document.querySelectorAll('.cta-button, .info-button').forEach(btn => {
@@ -94,24 +85,37 @@ document.querySelectorAll('.cta-button, .info-button').forEach(btn => {
     });
 });
 
-// Parallax effect for hero background
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    const speed = scrolled * 0.5;
-    hero.style.transform = `translateY(${speed}px)`;
-});
+// Parallax effect removed per user request
 
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
-        navbar.style.boxShadow = '0 8px 32px rgba(0,0,0,0.1)';
-    } else {
-        navbar.style.background = '#fff';
-        navbar.style.backdropFilter = 'none';
-        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-    }
-});
+// Navbar scroll effect removed per user request
+
+// Hero Carousel
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function changeSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let slides = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.dot');
+    
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    slides[slideIndex-1].classList.add('active');
+    dots[slideIndex-1].classList.add('active');
+}
+
+// Auto slide every 5 seconds
+setInterval(() => {
+    changeSlide(1);
+}, 5000);

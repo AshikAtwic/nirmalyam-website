@@ -32,11 +32,44 @@
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Discover Timeless Elegance</h1>
-            <p>Premium clothing for every occasion. Shop the latest collections at Nirmalyam.</p>
-            <a href="#products" class="cta-button">Shop Now</a>
+<section id="home" class="hero">
+        <div class="hero-carousel">
+            <div class="carousel-slides">
+                <div class="slide active">
+                    <div class="hero-overlay"></div>
+                    <img src="./images/saree1.jpeg" alt="Saree 1" class="hero-img">
+                </div>
+                <div class="slide">
+                    <div class="hero-overlay"></div>
+                    <img src="./images/saree2.jpeg" alt="Saree 2" class="hero-img">
+                </div>
+                <div class="slide">
+                    <div class="hero-overlay"></div>
+                    <img src="./images/saree3.jpeg" alt="Saree 3" class="hero-img">
+                </div>
+                <div class="slide">
+                    <div class="hero-overlay"></div>
+                    <img src="./images/saree4.jpeg" alt="Saree 4" class="hero-img">
+                </div>
+                <div class="slide">
+                    <div class="hero-overlay"></div>
+                    <img src="./images/saree5.jpeg" alt="Saree 5" class="hero-img">
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+            <div class="hero-content">
+                <h1>Discover Timeless Elegance</h1>
+                <p>Premium clothing for every occasion. Shop the latest collections at Nirmalyam.</p>
+                <a href="#products" class="cta-button">Shop Now</a>
+            </div>
         </div>
     </section>
 
@@ -45,22 +78,26 @@
             <h2 class="section-title">Featured Products</h2>
             <div class="products-grid">
                 <div class="product-card">
-<div class="product-images">
+                    <div class="product-images">
                         <img src="./images/saree1.jpeg" alt="Saree 1" class="saree-img">
                         <img src="./images/saree 1 model.jpeg" alt="Model in Saree 1" class="model-img">
                     </div>
                     <div class="product-info">
+                        <h3 class="product-name">Royal Kanjeevaram Saree</h3>
+                        <div class="product-price">₹15,999</div>
                         <div class="product-title"><i class="fas fa-star"></i> Premium Item</div>
                         <a href="https://wa.me/919567201036" class="info-button" target="_blank"><i class="fab fa-whatsapp"></i> Info</a>
 
                     </div>
                 </div>
                 <div class="product-card">
-<div class="product-images">
+                    <div class="product-images">
                         <img src="./images/saree2.jpeg" alt="Saree 2" class="saree-img">
                         <img src="./images/saree 2 model.jpeg" alt="Model in Saree 2" class="model-img">
                     </div>
                     <div class="product-info">
+                        <h3 class="product-name">Kanchipuram Silk Saree</h3>
+                        <div class="product-price">₹12,499</div>
                         <div class="product-title"><i class="fas fa-star"></i> Premium Item</div>
                         <a href="https://wa.me/919567201036" class="info-button" target="_blank"><i class="fab fa-whatsapp"></i> Info</a>
 
